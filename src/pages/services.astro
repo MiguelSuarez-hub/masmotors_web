@@ -5,68 +5,44 @@ import Layout from '../layouts/Layout.astro';
 const servicios = [
   {
     name: "Reparación de motores",
-    image: "/hyundai.svg",
+    image: "/motor.jpg",
   },
   {
     name: "Escaner",
-    image: "/mazda.svg",
+    image: "/escaner.jpg",
   },
   {
     name: "Suspensión",
-    image: "/nissan.svg",
+    image: "/suspension.jpg",
   },
   {
     name: "Frenos",
-    image: "/chevrolet.svg",
+    image: "/frenos.jpg",
   },
   {
     name: "Alistamiento para tecnomecanica",
-    image: "/ford.svg",
+    image: "/tecno.jpg",
   },
   {
     name: "Sincronización",
-    image: "/renault.svg",
+    image: "/sincro.jpg",
   },
   {
-    name: "Susuki",
-    image: "/susuki.svg",
+    name: "Cambio de aceite",
+    image: "/aceite.jpg",
   },
   {
-    name: "Kia",
-    image: "/kia.svg",
+    name: "Cambio correa de repartición",
+    image: "/correa.jpg",
   },
   {
-    name: "Toyota",
-    image: "/toyota.svg",
+    name: "Reparación de caja de velocidades",
+    image: "/caja.jpg",
   },
   {
-    name: "Fiat",
-    image: "/fiat.svg",
-  },
-  {
-    name: "Peugeot",
-    image: "/peugeot.svg",
-  },
-  {
-    name: "Subaru",
-    image: "/subaru.svg",
-  },
-  {
-    name: "Mitsubishi",
-    image: "/mitsubishi.svg",
-  },
-  {
-    name: "Volkswagen",
-    image: "/volkswagen.svg",
-  },
-  {
-    name: "Citroen",
-    image: "/citroen.svg",
-  },
-  {
-    name: "Honda",
-    image: "/honda.svg",
-  },
+    name: "Cambio de kit de embrague",
+    image: "/embrague.jpg",
+  }
 ];
 ---
 
@@ -74,7 +50,7 @@ const servicios = [
   <main class="p-[var(--padding-size)] w-full mt-4">
 		<h1 class="font-bold text-3xl md:text-5xl w-full text-center">Servicios</h1>
     <section
-      class="text-sm lg:text-lg md:grid md:grid-cols-3 md:gap-2 mt-4"
+      class="text-sm lg:text-lg sm:grid sm:grid-cols-2 lg:grid-cols-5 md:gap-10 mt-4"
     >
     {
       servicios.map((servicio) => (
