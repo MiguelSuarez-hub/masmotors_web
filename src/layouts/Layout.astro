@@ -43,29 +43,6 @@ const { title } = Astro.props;
       </svg></a
     >
     <Footer />
-    <script>
-      // Initialize and add the map
-      let map;
-      async function initMap(): Promise<void> {
-        // The location of Uluru
-        const position = { lat: 4.693999, lng: -74.11894 };
-
-        // Request needed libraries.
-        //@ts-ignore
-        let map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 15,
-          center: position,
-        });
-        let marker = new google.maps.Marker({ position: position, map: map });
-      }
-
-      initMap();
-    </script>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1kEaZgK3wQTXG7vnj6QAeXrEq0y7pQY0&callback=initMap"
-    ></script>
   </body>
 </html>
 <script>
