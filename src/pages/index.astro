@@ -1,0 +1,142 @@
+---
+import Card from "../components/Card.astro";
+import TextCard from "../components/TextCard.astro";
+import CardButton from "../components/CardButton.astro";
+import Layout from "../layouts/Layout.astro";
+
+const marcas = [
+  {
+    name: "Hyundai",
+    image: "/hyundai.svg",
+  },
+  {
+    name: "Mazda",
+    image: "/mazda.svg",
+  },
+  {
+    name: "Nissan",
+    image: "/nissan.svg",
+  },
+  {
+    name: "Chevrolet",
+    image: "/chevrolet.svg",
+  },
+  {
+    name: "Ford",
+    image: "/ford.svg",
+  },
+  {
+    name: "Renault",
+    image: "/renault.svg",
+  },
+  {
+    name: "Susuki",
+    image: "/susuki.svg",
+  },
+  {
+    name: "Kia",
+    image: "/kia.svg",
+  },
+  {
+    name: "Toyota",
+    image: "/toyota.svg",
+  },
+  {
+    name: "Fiat",
+    image: "/fiat.svg",
+  },
+  {
+    name: "Peugeot",
+    image: "/peugeot.svg",
+  },
+  {
+    name: "Subaru",
+    image: "/subaru.svg",
+  },
+  {
+    name: "Mitsubishi",
+    image: "/mitsubishi.svg",
+  },
+  {
+    name: "Volkswagen",
+    image: "/volkswagen.svg",
+  },
+  {
+    name: "Citroen",
+    image: "/citroen.svg",
+  },
+  {
+    name: "Honda",
+    image: "/honda.svg",
+  },
+];
+---
+
+<Layout title="Bienvenidos">
+  <main class="p-[var(--padding-size)] w-full mt-4">
+    <h1 class="font-bold text-3xl md:text-6xl w-full">
+      Mantenimiento general a su Vehiculo.
+    </h1>
+    <div
+      class="h-4/5 md:h-[450px] flex flex-col items-center justify-center my-3 md:bg-[url('/camaro.avif')] bg-no-repeat bg-center relative"
+    >
+      <img
+        src="/logo.svg"
+        alt="logo masmotors"
+        class="w-2/3 md:w-1/3 md:absolute md:top-0 md:left-1"
+      />
+      <img src="/camaro.png" alt="Camaro" class="w-full md:hidden" />
+    </div>
+    <section class="text-sm lg:text-lg md:grid md:grid-cols-2 md:gap-2 my-10">
+      <TextCard>
+        <p class="">
+          ¡Bienvenidos a nuestro taller de mecánica automotriz de confianza! En
+          nuestro establecimiento, nos enorgullece ofrecer una amplia gama de
+          servicios de alta calidad para mantener su vehículo en óptimas
+          condiciones. Nuestro equipo de técnicos altamente capacitados y
+          experimentados está listo para abordar cualquier problema que pueda
+          tener su automóvil, desde reparaciones mecánicas básicas hasta
+          diagnósticos avanzados y soluciones de problemas eléctricos. Ya sea
+          que necesite un cambio de aceite, una revisión de frenos, una
+          alineación de ruedas o una reparación más compleja, estamos
+          comprometidos a proporcionar un servicio eficiente y asequible para
+          satisfacer sus necesidades.
+        </p>
+        <CardButton href="/services" blank={false}>Ver servicios</CardButton>
+      </TextCard>
+      <TextCard>
+        <p class="">
+          En nuestro taller, nos esforzamos por mantener altos estándares de
+          calidad y satisfacción del cliente. Sabemos lo importante que es su
+          vehículo para usted, y trabajamos con precisión y cuidado para
+          devolverle su automóvil en excelentes condiciones. No importa la marca
+          o modelo de su automóvil, ¡confíe en nosotros para brindarle
+          soluciones confiables y un servicio excepcional! Estamos aquí para
+          mantenerlo en la carretera de manera segura y confiable, así que no
+          dude en ponerse en contacto con nosotros para programar una cita o
+          hacer cualquier consulta sobre nuestros servicios de mecánica
+          automotriz.
+        </p>
+        <CardButton href="https://api.whatsapp.com/send?phone=573118555047" blank={true}>Contactanos</CardButton>
+      </T>
+    </section>
+    <section class="full-width">
+      <div class="flex overflow-hidden">
+        <ul class="flex gap-5 animate-scroll shrink-0">
+          {
+            marcas.map((marca) => (
+              <Card title={marca.name} image={marca.image} />
+            ))
+          }
+        </ul>
+        <ul class="flex gap-5 animate-scroll shrink-0" aria-hidden="true">
+          {
+            marcas.map((marca) => (
+              <Card title={marca.name} image={marca.image} />
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
+</Layout>

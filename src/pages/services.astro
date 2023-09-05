@@ -1,0 +1,86 @@
+---
+import ServiceCard from '../components/ServiceCard.astro';
+import Layout from '../layouts/Layout.astro';
+
+const servicios = [
+  {
+    name: "Reparación de motores",
+    image: "/hyundai.svg",
+  },
+  {
+    name: "Escaner",
+    image: "/mazda.svg",
+  },
+  {
+    name: "Suspensión",
+    image: "/nissan.svg",
+  },
+  {
+    name: "Frenos",
+    image: "/chevrolet.svg",
+  },
+  {
+    name: "Alistamiento para tecnomecanica",
+    image: "/ford.svg",
+  },
+  {
+    name: "Sincronización",
+    image: "/renault.svg",
+  },
+  {
+    name: "Susuki",
+    image: "/susuki.svg",
+  },
+  {
+    name: "Kia",
+    image: "/kia.svg",
+  },
+  {
+    name: "Toyota",
+    image: "/toyota.svg",
+  },
+  {
+    name: "Fiat",
+    image: "/fiat.svg",
+  },
+  {
+    name: "Peugeot",
+    image: "/peugeot.svg",
+  },
+  {
+    name: "Subaru",
+    image: "/subaru.svg",
+  },
+  {
+    name: "Mitsubishi",
+    image: "/mitsubishi.svg",
+  },
+  {
+    name: "Volkswagen",
+    image: "/volkswagen.svg",
+  },
+  {
+    name: "Citroen",
+    image: "/citroen.svg",
+  },
+  {
+    name: "Honda",
+    image: "/honda.svg",
+  },
+];
+---
+
+<Layout title="Servicios">
+  <main class="p-[var(--padding-size)] w-full mt-4">
+		<h1 class="font-bold text-3xl md:text-5xl w-full text-center">Servicios</h1>
+    <section
+      class="text-sm lg:text-lg md:grid md:grid-cols-3 md:gap-2 mt-4"
+    >
+    {
+      servicios.map((servicio) => (
+        <ServiceCard title={servicio.name} image={servicio.image} />
+      ))
+    }
+    </section>
+  </main>
+</Layout>

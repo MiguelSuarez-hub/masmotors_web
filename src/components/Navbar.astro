@@ -1,0 +1,84 @@
+---
+const path = Astro.url.pathname;
+---
+
+<header>
+  <nav class="flex items-center justify-between p-2 mx-5">
+    <div class="flex justify-center gap-3 items-center hover:scale-110">
+      <a href="/" class="text-xl font-bold italic md:flex gap-2"
+        ><span class="special-text">MASmotor's</span> 
+        <p class="hidden md:flex">| Ingenieria Automotriz</p></a
+      >
+    </div>
+    <div class="justify-center gap-3 items-center hidden lg:flex">
+      <ul class="flex gap-4 items-center">
+        <li
+          class=`${path === "/"
+        ? "border-b-4 border-green-600"
+        : "border-b-4 border-gray-600"} text-xl hover:scale-y-110 hover:text-primary`
+        >
+          <a href="/">Inicio</a>
+        </li>
+        <li
+          class=`${path === "/services"
+        ? "border-b-4 border-green-600"
+        : "border-b-4 border-gray-600"} text-xl hover:scale-y-110 hover:text-primary`
+        >
+          <a href="/services">Servicios</a>
+        </li>
+        <li
+          class=`${path === "/about"
+        ? "border-b-4 border-green-600"
+        : "border-b-4 border-gray-600"} text-xl hover:scale-y-110 hover:text-primary`
+        >
+          <a href="/about">Acerca de nosotros</a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex items-center lg:hidden lg:invisible gap-3">
+      <button
+        data-toggle-nav
+        data-open-nav="false"
+        class="outline-none w-10 h-10 flex flex-col items-center justify-center relative rounded-lg p-2 border border-black"
+      >
+        <span
+          id="line1"
+          class="w-6 h-0.5 rounded-full bg-textcolor transition-all duration-300 ease-linear"
+        ></span>
+        <span
+          id="line2"
+          class="w-6 origin-center mt-1 h-0.5 rounded-full bg-textcolor transition-all duration-300 ease-linear"
+        ></span>
+        <span
+          id="line3"
+          class="w-6 mt-1 h-0.5 rounded-full bg-textcolor transition-all duration-300 ease-linear"
+        ></span>
+      </button>
+    </div>
+  </nav>
+  <div navbar-mobile class="w-full mt-4 hidden mx-5">
+    <ul class="w-full flex flex-col gap-y-3">
+      <li
+        class=`${path === "/"
+            ? "border-l-4 border-green-600"
+            : "border-l-4 border-gray-600"} w-full flex text-2xl pl-5 hover:scale-y-110 hover:text-primary cursor-pointer`
+      >
+        <a href="/" class="">Inicio</a>
+      </li>
+      <li
+        class=`${path === "/services"
+        ? "border-l-4 border-green-600"
+        : "border-l-4 border-gray-600"} w-full flex text-2xl pl-5 hover:scale-y-110 hover:text-primary cursor-pointer`
+      >
+        <a href="/services">Servicios</a>
+      </li>
+      <li
+        class=`${path === "/about"
+        ? "border-l-4 border-green-600"
+        : "border-l-4 border-gray-600"} w-full flex text-2xl pl-5 hover:scale-y-110 hover:text-primary cursor-pointer`
+      >
+        <a href="/about">Acerca de nosotros</a>
+      </li>
+    </ul>
+  </div>
+</header>
