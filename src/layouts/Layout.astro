@@ -35,7 +35,7 @@ const { title } = Astro.props;
     <a
       href="https://api.whatsapp.com/send?phone=573118555047"
       target="_blank"
-      class="bg-[#16BE45] p-3 fixed z-50 bottom-10 right-5 rounded-full hover:scale-125 text-white"
+      class="bg-[#16BE45] p-3 fixed z-50 bottom-10 right-5 rounded-full hover:scale-125 text-white transition duration-300"
       ><svg fill="currentColor" viewBox="0 0 16 16" class="w-6 h-6">
         <path
           d="M13.601 2.326A7.854 7.854 0 007.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 003.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0013.6 2.326zM7.994 14.521a6.573 6.573 0 01-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 01-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 014.66 1.931 6.557 6.557 0 011.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 00-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
@@ -69,47 +69,39 @@ const { title } = Astro.props;
   src="https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js"
 ></script>
 <style is:global>
-  :root {
-    --color-bg: rgb(100 116 139/50);
-    --color-tx: #000;
-    --padding-size: 1.75rem;
-    --special-font: "Dancing Script", cursive;
-  }
-  html {
-    margin: 0;
-    padding: 0;
+  * {
     box-sizing: border-box;
-    font-family: system-ui, sans-serif;
-    background-size: 224px;
+    min-width: 0;
   }
-  [data-toggle-nav][data-open-nav="true"] #line1 {
-    transform: translateY(0.375rem) rotate(40deg);
+
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
-  [data-toggle-nav][data-open-nav="true"] #line2 {
-    transform: scaleX(0);
-    opacity: 0;
+
+  body {
+    color: rgba(17, 17, 17, 0.9);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overscroll-behavior: none;
+    background: whitesmoke;
   }
-  [data-toggle-nav][data-open-nav="true"] #line3 {
-    transform: translateY(-0.375rem) rotate(-40deg);
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
-  .full-width {
-    width: calc(100% + var(--padding-size) * 2);
-    transform: translateX(calc(var(--padding-size) * -1));
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
   }
-  .special-text {
-    font-family: var(--special-font);
-  }
-  .btn-card rect {
-    fill: none;
-    stroke: #01579b;
-    stroke-width: 2;
-    stroke-dasharray: 422, 0;
-    transition: all 0.35s linear;
-  }
-  .btn-card:hover rect {
-    stroke-width: 5;
-    stroke-dasharray: 15, 310;
-    stroke-dashoffset: 48;
-    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+
+  p {
+    text-wrap: pretty;
   }
 </style>

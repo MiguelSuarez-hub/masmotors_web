@@ -1,6 +1,5 @@
 ---
 import ServiceCard from '../components/ServiceCard.astro';
-import Layout from '../layouts/Layout.astro';
 
 const servicios = [
   {
@@ -46,17 +45,13 @@ const servicios = [
 ];
 ---
 
-<Layout title="Servicios">
-  <main class="p-[var(--padding-size)] w-full mt-4">
-		<h1 class="font-bold text-3xl md:text-5xl w-full text-center">Servicios</h1>
-    <section
-      class="text-sm lg:text-lg sm:grid sm:grid-cols-2 lg:grid-cols-5 md:gap-10 mt-4"
-    >
-    {
-      servicios.map((servicio) => (
-        <ServiceCard title={servicio.name} image={servicio.image} />
-      ))
-    }
-    </section>
-  </main>
-</Layout>
+<h2 class="font-bold text-3xl md:text-5xl w-full text-center">Servicios</h2>
+      <div
+        class="text-sm lg:text-lg sm:grid sm:grid-cols-2 lg:grid-cols-5 md:gap-10 mt-12"
+      >
+      {
+        servicios.map((servicio) => (
+          <ServiceCard title={servicio.name} image={servicio.image} />
+        ))
+      }
+      </div>
