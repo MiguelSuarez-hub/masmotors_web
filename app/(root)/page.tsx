@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import hero from "@/public/hero3.png"
 import {
   Car,
   CheckCircle,
@@ -16,7 +17,7 @@ export default function Home() {
     <>
       <section
         id="hero"
-        className="relative pt-2 py-10 md:py-20 flex items-center justify-start"
+        className="relative pt-2 py-10 md:py-20 lg:h-[80dvh] flex items-center justify-start"
       >
         <div className="w-full md:w-1/2 max-w-[680px] flex flex-col items-center md:items-start justify-center text-center z-10 py-3 pr-3 pl-1 rounded-xl md:rounded-s-none md:rounded-e-xl bg-white/30 md:bg-white/70">
           <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-6 text-balance">
@@ -36,13 +37,19 @@ export default function Home() {
           </div>
         </div>
         <Image
-          src="/hero.jpg"
+          src={hero}
           fill
           alt="Hero image"
-          className="absolute top-0 object-cover"
+          className="absolute top-0 object-cover md:object-cover"
         />
+        {/* <Image
+          src='/hero.jpg'
+          fill
+          alt="Hero image"
+          className="absolute top-0 object-cover md:object-cover"
+        /> */}
       </section>
-      <section id="features" className="py-10 px-5 bg-background">
+      <section id="features" className="py-10 px-5 bg-background flex items-center justify-center">
         <div className="container">
           <div className="text-center mb-4">
             <h2 className="text-3xl font-bold mb-4">¿Por qué elegirnos?</h2>
@@ -87,7 +94,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="services" className="py-10 px-5 bg-muted">
+      <section id="services" className="py-10 px-5 bg-muted flex items-center justify-center">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Nuestros Servicios</h2>
@@ -156,7 +163,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-10 px-5 bg-background">
+      <section className="py-10 px-5 bg-background flex items-center justify-center">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Lo que dicen nuestros clientes</h2>
@@ -194,7 +201,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-10 px-5 bg-primary text-primary-foreground">
+      <section className="py-10 px-5 bg-primary text-primary-foreground flex items-center justify-center">
         <div className="container text-center">
           <h2 className="text-3xl font-bold mb-4">¿Listo para mejorar el rendimiento de tu vehículo?</h2>
           <p className="max-w-2xl mx-auto mb-8">
