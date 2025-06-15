@@ -17,9 +17,9 @@ export default function Home() {
     <>
       <section
         id="hero"
-        className="relative pt-2 py-10 md:py-20 lg:h-[80dvh] flex items-center justify-start"
+        className="relative pt-2 py-10 md:py-20 h-dvh flex  items-end justify-start"
       >
-        <div className="w-full md:w-1/2 max-w-[680px] flex flex-col items-center md:items-start justify-center text-center z-10 py-3 pr-3 pl-1 rounded-xl md:rounded-s-none md:rounded-e-xl bg-white/30 md:bg-white/70">
+        <div className="w-full md:w-1/2 max-w-[680px] flex flex-col items-center md:items-start justify-center text-center z-10 py-3 px-5 rounded-xl md:rounded-s-none md:rounded-e-xl bg-white/30 md:bg-white/70">
           <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-6 text-balance">
             Servicio Automotriz de <span className="text-primary">Calidad</span>
           </h1>
