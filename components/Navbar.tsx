@@ -25,7 +25,7 @@ export const Navbar = () => {
 
 
   return (
-    <header className={cn("sticky top-0 left-0 w-full z-10 bg-body", isScrolled && "bg-white/50")}>
+    <header className={cn("fixed top-0 left-0 w-full z-10 bg-body", isScrolled && "bg-white/50")}>
       <nav className="flex items-center justify-between p-2 mx-5">
         <div className="flex justify-center gap-3 items-center hover:scale-105">
           <Link href="/" className="text-xl font-bold italic md:flex gap-2">
@@ -33,7 +33,7 @@ export const Navbar = () => {
             <p className="hidden md:flex">| Ingenieria Automotriz</p>
           </Link>
         </div>
-        <div className="justify-center gap-3 items-center hidden lg:flex text-gray-500">
+        <div className="justify-center gap-3 items-center hidden lg:flex ">
           <ul className="flex gap-4 items-center">
             {LINKS.map((link) => (
               <li
